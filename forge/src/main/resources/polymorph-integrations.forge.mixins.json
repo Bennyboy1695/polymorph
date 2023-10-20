@@ -4,8 +4,15 @@
   "compatibilityLevel": "JAVA_16",
   "refmap": "polymorph.refmap.json",
   "mixins": [
+    "appliedenergistics2.AccessorCraftingTermMenu",
+    "appliedenergistics2.AccessorPatternTermMenu",
+    "appliedenergistics2.MixinCraftingTermMenu",
+    "appliedenergistics2.MixinPatternTermMenu",
     "fastbench.PolymorphMixinFastBenchUtil",
-    "fastsuite.PolymorphMixinAuxRecipeManager"
+    "fastsuite.PolymorphMixinAuxRecipeManager",
+    "toms_storage.AccessorStorageTerminalMenu",
+    "toms_storage.AccessorCraftingTerminalBlockEntity",
+    "toms_storage.MixinCraftingTerminalBlockEntity"
   ],
   "plugin": "com.illusivesoulworks.polymorph.mixin.IntegratedMixinPlugin",
   "minVersion": "0.8",

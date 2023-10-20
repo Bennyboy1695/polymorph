@@ -18,8 +18,10 @@
 package com.illusivesoulworks.polymorph.platform;
 
 import com.illusivesoulworks.polymorph.common.integration.AbstractCompatibilityModule;
+import com.illusivesoulworks.polymorph.common.integration.appliedenergistics2.AppliedEnergisticsModule;
 import com.illusivesoulworks.polymorph.common.integration.fastbench.FastBenchModule;
 import com.illusivesoulworks.polymorph.common.integration.fastfurnace.FastFurnaceModule;
+import com.illusivesoulworks.polymorph.common.integration.toms_storage.TomsStorageModule;
 import com.illusivesoulworks.polymorph.platform.services.IIntegrationPlatform;
 import java.util.HashMap;
 import java.util.Map;
@@ -32,6 +34,8 @@ public class ForgeIntegrationPlatform implements IIntegrationPlatform {
     Map<String, Supplier<Supplier<AbstractCompatibilityModule>>> result = new HashMap<>();
     result.put("fastfurnace", () -> FastFurnaceModule::new);
     result.put("fastbench", () -> FastBenchModule::new);
+    result.put("ae2", () -> AppliedEnergisticsModule::new);
+    result.put("toms_storage", () -> TomsStorageModule::new);
     return result;
   }
 }

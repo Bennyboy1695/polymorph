@@ -96,6 +96,8 @@ dependencies {
     compileOnly fg.deobf("curse.maven:fastfurnace-299540:${file_fastfurnace}")
     compileOnly fg.deobf("curse.maven:fastsuite-475117:${file_fastsuite}")
     compileOnly fg.deobf("curse.maven:placebo-283644:${file_placebo}")
+    compileOnly fg.deobf("curse.maven:applied-energistics-2-223794:${file_ae2}")
+    compileOnly fg.deobf("curse.maven:toms-storage-378609:${file_toms_storage}")
 
     implementation fg.deobf(group: 'com.illusivesoulworks.spectrelib', name: 'spectrelib-forge', version: "${spectrelib_range}")
     jarJar fg.deobf(group: 'com.illusivesoulworks.spectrelib', name: 'spectrelib-forge', version: "${spectrelib_range}") {
@@ -181,7 +183,7 @@ task publishCurseForge(type: net.darkhax.curseforgegradle.TaskPublishCurseForge)
 }
 
 modrinth {
-    token = findProperty('modrinthKey') ?: 0
+    token = findProperty('modrinthKey') ?: "0"
     projectId = "${modrinth_id}"
     versionName = getArchivesBaseName() + "-" + getVersion()
     versionType = "${release_type}"
